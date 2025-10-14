@@ -33,10 +33,10 @@ const Contact = () => {
                       တနင်္လာနေ့မှ စနေနေ့ (9:00 - 18:00)
                     </p>
                     <a 
-                      href="tel:+959123456789" 
+                      href="tel:+959420765270" 
                       className="text-primary hover:text-primary/80 transition-smooth font-medium block"
                     >
-                      +95 9 123 456 789
+                      09-420765270
                     </a>
                   </div>
                 </div>
@@ -53,10 +53,10 @@ const Contact = () => {
                       အမြန်ဆုံး တုံ့ပြန်မှုရရန်
                     </p>
                     <a 
-                      href="viber://chat?number=+959123456789" 
+                      href="viber://chat?number=+959420765270" 
                       className="text-primary hover:text-primary/80 transition-smooth font-medium block"
                     >
-                      +95 9 123 456 789
+                      09-420765270
                     </a>
                   </div>
                 </div>
@@ -77,10 +77,10 @@ const Contact = () => {
                       အသေးစိတ်မေးမြန်းလိုပါက
                     </p>
                     <a 
-                      href="mailto:info@guruji.com" 
+                      href="mailto:kmabusiness.market@gmail.com" 
                       className="text-primary hover:text-primary/80 transition-smooth font-medium block break-all"
                     >
-                      info@guruji.com
+                      kmabusiness.market@gmail.com
                     </a>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                       တနင်္လာနေ့မှ စနေနေ့ လာရောက်ဝယ်ယူနိုင်ပါသည်
                     </p>
                     <p className="text-foreground font-pyidaungsu">
-                      ရန်ကုန်မြို့, မြန်မာနိုင်ငံ
+                      မြန်မာ (ရန်ကုန်မြို့)
                     </p>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ const Contact = () => {
                 <Button 
                   size="lg"
                   className="bg-card hover:bg-card/90 text-foreground shadow-card hover:shadow-hover transition-smooth w-full sm:w-auto font-pyidaungsu"
-                  onClick={() => window.open('tel:+959123456789', '_self')}
+                  onClick={() => window.open('tel:+959420765270', '_self')}
                 >
                   <Phone className="mr-2 w-4 h-4" />
                   ယခုပင်ဖုန်းဆက်ရန်
@@ -131,7 +131,7 @@ const Contact = () => {
                   size="lg"
                   variant="outline"
                   className="border-primary-foreground/20 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto font-pyidaungsu"
-                  onClick={() => window.open('viber://chat?number=+959123456789', '_blank')}
+                  onClick={() => window.open('viber://chat?number=+959420765270', '_blank')}
                 >
                   <MessageCircle className="mr-2 w-4 h-4" />
                   Viber မက်ဆေ့ခ်ပို့ရန်
