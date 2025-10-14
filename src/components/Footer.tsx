@@ -72,21 +72,21 @@ const Footer = () => {
             </h3>
             <div className="space-y-3">
               <a 
-                href="tel:+959123456789" 
+                href="tel:+959420765270" 
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-smooth group"
               >
                 <Phone className="w-4 h-4 group-hover:text-primary transition-smooth" />
-                <span>+95 9 123 456 789</span>
+                <span>+959420765270</span>
               </a>
               <a 
-                href="viber://chat?number=+959123456789" 
+                href="viber://chat?number=09420765270" 
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-smooth group"
               >
                 <MessageCircle className="w-4 h-4 group-hover:text-primary transition-smooth" />
                 <span className="font-pyidaungsu">Viber မက်ဆေ့ခ်ပို့ရန်</span>
               </a>
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/kingdelayspraystore" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-smooth group"
