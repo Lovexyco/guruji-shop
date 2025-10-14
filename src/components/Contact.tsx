@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Facebook, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -15,6 +15,39 @@ const Contact = () => {
             <p className="text-lg text-muted-foreground font-pyidaungsu max-w-2xl mx-auto">
               သင့်လိုအပ်ချက်များအတွက် ကျွန်ုပ်တို့ကို ဆက်သွယ်နိုင်ပါသည်။ ကျွန်ုပ်တို့၏အဖွဲ့သည် အမြဲအဆင်သင့်ရှိပါသည်။
             </p>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-12 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <a
+              href="https://www.facebook.com/kingdelayspraystore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 bg-card border border-border/50 rounded-lg hover:shadow-hover transition-smooth group"
+            >
+              <Facebook className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+              <span className="font-pyidaungsu text-foreground">Facebook</span>
+            </a>
+            <a
+              href="https://t.me/gurujitoyshop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 bg-card border border-border/50 rounded-lg hover:shadow-hover transition-smooth group"
+            >
+              <Send className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+              <span className="font-pyidaungsu text-foreground">Telegram</span>
+            </a>
+            <a
+              href="https://tiktok.com/@gurujitoyshop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 bg-card border border-border/50 rounded-lg hover:shadow-hover transition-smooth group"
+            >
+              <svg className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+              </svg>
+              <span className="font-pyidaungsu text-foreground">TikTok</span>
+            </a>
           </div>
 
           {/* Contact Cards */}
