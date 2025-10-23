@@ -12,19 +12,21 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroBanner} 
-          alt="Real Kings Men's Power Store" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-primary-light/30" />
-      </div>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-background via-background/95 to-primary-light/20" />
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 animate-fade-in">
+          {/* Logo */}
+          <div className="flex justify-center mb-6 sm:mb-8">
+            <img 
+              src={heroBanner} 
+              alt="Real Kings Logo" 
+              className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl"
+            />
+          </div>
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/50 backdrop-blur-sm rounded-full border border-accent-foreground/10 animate-scale-in">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
