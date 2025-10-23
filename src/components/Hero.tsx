@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBanner from "@/assets/hero-banner.jpg";
+import heroBanner from "@/assets/real-kings-logo.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBanner} 
-          alt="Guruji Household Products" 
+          alt="Real Kings Men's Power Store" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-primary-light/30" />
@@ -35,7 +35,7 @@ const Hero = () => {
 
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Guruji
+            Real Kings
           </h1>
 
           {/* Subtitle */}

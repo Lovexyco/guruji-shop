@@ -26,7 +26,7 @@ const Header = () => {
               <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
             </div>
             <span className="text-xl sm:text-2xl font-bold font-pyidaungsu text-foreground">
-              Guruji
+              Real Kings
             </span>
           </div>
 
