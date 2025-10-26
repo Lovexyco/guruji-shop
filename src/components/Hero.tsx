@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBanner from "@/assets/real-kings-logo.png";
+import heroBanner from "@/assets/hero-banner-wide.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -12,20 +12,19 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-background via-background/95 to-primary-light/20" />
+      {/* Banner Image */}
+      <div className="absolute top-16 sm:top-20 left-0 right-0 z-0 h-[300px] sm:h-[400px] md:h-[600px] overflow-hidden">
+        <img 
+          src={heroBanner} 
+          alt="Real Kings Banner" 
+          className="w-full h-full object-contain object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+      </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-[200px] sm:pt-[250px] md:pt-[350px]">
         <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 animate-fade-in">
-          {/* Logo */}
-          <div className="flex justify-center mb-6 sm:mb-8">
-            <img 
-              src={heroBanner} 
-              alt="Real Kings Logo" 
-              className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl"
-            />
-          </div>
 
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/50 backdrop-blur-sm rounded-full border border-accent-foreground/10 animate-scale-in">
