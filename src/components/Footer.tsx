@@ -1,4 +1,4 @@
-import { ShoppingBag, Facebook, MessageCircle, Phone } from "lucide-react";
+import { ShoppingBag, Send, MessageCircle, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -72,27 +72,27 @@ const Footer = () => {
             </h3>
             <div className="space-y-3">
               <a 
-                href="tel:+959420765270" 
+                href="tel:09788851201" 
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-smooth group"
               >
                 <Phone className="w-4 h-4 group-hover:text-primary transition-smooth" />
-                <span>+959420765270</span>
+                <span>09788851201</span>
               </a>
               <a 
-                href="viber://chat?number=09420765270" 
+                href="viber://chat?number=09788851201" 
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-smooth group"
               >
                 <MessageCircle className="w-4 h-4 group-hover:text-primary transition-smooth" />
-                <span className="font-pyidaungsu">Viber မက်ဆေ့ခ်ပို့ရန်</span>
+                <span className="font-pyidaungsu">Viber မက်ဆေ့ခ်ပို့ရန် (09788851201)</span>
               </a>
               <a 
-                href="https://www.facebook.com/kingdelayspraystore" 
+                href="https://t.me/realkings_adm" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-smooth group"
               >
-                <Facebook className="w-4 h-4 group-hover:text-primary transition-smooth" />
-                <span>Facebook</span>
+                <Send className="w-4 h-4 group-hover:text-primary transition-smooth" />
+                <span>Telegram</span>
               </a>
             </div>
           </div>
