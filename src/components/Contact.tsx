@@ -29,7 +29,7 @@ const Contact = () => {
               <span className="font-pyidaungsu text-foreground">Facebook</span>
             </a>
             <a
-              href="https://t.me/gurujitoyshop"
+              href="https://t.me/menpowerstore"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-card border border-border/50 rounded-lg hover:shadow-hover transition-smooth group"
@@ -66,10 +66,10 @@ const Contact = () => {
                       တနင်္လာနေ့မှ စနေနေ့ (9:00 - 18:00)
                     </p>
                     <a 
-                      href="tel:+959420765270" 
+                      href="tel:09788851201" 
                       className="text-primary hover:text-primary/80 transition-smooth font-medium block"
                     >
-                      09-420765270
+                      09788851201
                     </a>
                   </div>
                 </div>
@@ -86,10 +86,10 @@ const Contact = () => {
                       အမြန်ဆုံး တုံ့ပြန်မှုရရန်
                     </p>
                     <a 
-                      href="viber://chat?number=+959420765270" 
+                      href="viber://chat?number=09788851201" 
                       className="text-primary hover:text-primary/80 transition-smooth font-medium block"
                     >
-                      09-420765270
+                      09788851201
                     </a>
                   </div>
                 </div>
@@ -110,10 +110,10 @@ const Contact = () => {
                       အသေးစိတ်မေးမြန်းလိုပါက
                     </p>
                     <a 
-                      href="mailto:kmabusiness.market@gmail.com" 
+                      href="mailto:realkingsofficial01@gmail.com" 
                       className="text-primary hover:text-primary/80 transition-smooth font-medium block break-all"
                     >
-                      kmabusiness.market@gmail.com
+                      realkingsofficial01@gmail.com
                     </a>
                   </div>
                 </div>
