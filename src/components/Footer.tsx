@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
                 <ShoppingBag className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="text-2xl font-bold font-pyidaungsu">Guruji</span>
+              <span className="text-2xl font-bold font-pyidaungsu">Real Kings</span>
             </div>
             <p className="text-sm text-muted-foreground font-pyidaungsu leading-relaxed">
               အိမ်ထောင်ရေးသုံးပစ္စည်းများအရောင်းဆိုင်
@@ -101,7 +101,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border/50 text-center">
           <p className="text-sm text-muted-foreground font-pyidaungsu">
-            © {currentYear} Guruji. အခွင့်အရေးအားလုံးကို လေးစားဆက်ဆံထားရှိသည်။
+            © {currentYear} Real Kings. အခွင့်အရေးအားလုံးကို လေးစားဆက်ဆံထားရှိသည်။
           </p>
         </div>
       </div>
