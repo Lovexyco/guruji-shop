@@ -1,6 +1,6 @@
+import { products } from "../products";
 "use client";
 import React, { useState } from "react";
-
 interface Product {
   id: number;
   title: string;
@@ -8,11 +8,8 @@ interface Product {
   description: string;
   image?: string;
 }
-
 export default function ProductPage() {
-  const isAdmin = false; // Admin mode → true / Public → false
-
-  const [products, setProducts] = useState<Product[]>([
+  const isAdmin = false; // Admin mode → true / Public → useState
     {
       id: 1,
       title: "အမျိုးသားသုံးပစ္စည်းများ (Men)",
@@ -30,35 +27,28 @@ export default function ProductPage() {
      "https://images.unsplash.com/photo-1600185365483-26d7b82be1d5?auto=format&fit=crop&w=600&q=60",
     },
   ]);
-
-  // form data
-  const [newProduct, setNewProduct] = useState({
+ // form data({
     title: "",
     price: "",
     description: "",
     image: "",
   });
-
   const handleAddProduct = () => {
     if (!newProduct.title || !newProduct.price) return alert("Enter full info!");
-
-    const product: Product = {
+  const product: Product = {
       id: Date.now(),
       title: newProduct.title,
       price: parseFloat(newProduct.price),
       description: newProduct.description,
       image: newProduct.image,
     };
-
-    setProducts([...products, product]);
+   setProducts([...products, product]);
     setNewProduct({ title: "", price: "", description: "", image: "" });
   };
-
   return (
     <div className="max-w-3xl mx-auto p-4">
       <h2 className="text-2xl font-bold mb-4 text-center">🛍️ Product List</h2>
-
-      {/* ✅ Add Product Form (Admin only) */}
+  {/* ✅ Add Product Form (Admin only) */}
       {isAdmin && (
         <div className="border p-4 rounded-2xl mb-6 bg-gray-50 shadow-sm">
           <h3 className="font-semibold mb-2">➕ Add New Product</h3>
