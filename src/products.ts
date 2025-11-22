@@ -1,45 +1,100 @@
-// src/products.ts
-
 export interface Product {
   id: number;
-  title: string;
+  name: string;
   price: number;
+  image: string;
   description: string;
-  image?: string;
+  category: string;
 }
 
 export const products: Product[] = [
   {
     id: 1,
-    title: "အမျိုးသားသုံးပစ္စည်းများ (Men)",
-    price: 0,
+    name: "Durex Thin Feel Condoms",
+    price: 6500,
+    image: "/products/durex_thin_feel.png",
     description:
-      "အမျိုးသားတို့အတွက် ဆန်းသစ်သော ခံစားမှုနှင့် အထိအတွေ့အသစ်များကိုပေးနိုင်သည့် အရည်အသွေးမြင့်ပစ္စည်းများ",
-    image: "https://via.placeholder.com/400x250?text=Men+Category",
+      "Ultra-thin condoms designed for enhanced sensitivity and a more natural feel.",
+    category: "Condoms",
   },
   {
     id: 2,
-    title: "ကွန်ဒုံးများ (Condoms)",
-    price: 3500,
+    name: "Durex Extra Safe Condoms",
+    price: 7000,
+    image: "/products/durex_extra_safe.png",
     description:
-      "အသွင်ခုံဆန်းသစ်ပြီး အရည်အသွေးမြင့်ကွန်ဒုံးအမျိုးအစားများ",
-    image:
-      "https://images.unsplash.com/photo-1600185365483-26d7b82be1d5?auto=format&fit=crop&w=600&q=60",
+      "Thicker condoms with extra lubrication for added safety and protection.",
+    category: "Condoms",
   },
   {
     id: 3,
-    title: "Massage Oil (Relax & Refresh)",
-    price: 6500,
-    description: "ရောဂါမဖြစ်အောင် ကာကွယ်ပေးပြီး ခံစားမှုကောင်းမွန်စေတဲ့ Massage Oil",
-    image:
-      "https://via.placeholder.com/400x250?text=Massage+Oil",
+    name: "Durex Invisible Ultra Thin",
+    price: 7500,
+    image: "/products/durex_invisible.png",
+    description:
+      "Durex’s thinnest condoms ever — maximum sensitivity and comfort.",
+    category: "Condoms",
   },
   {
     id: 4,
-    title: "Romantic Spray",
+    name: "Okamoto Zero One (0.01mm)",
+    price: 12000,
+    image: "/products/okamoto_001.png",
+    description:
+      "Premium Japanese condoms with only 0.01mm thickness — extremely natural feeling.",
+    category: "Condoms",
+  },
+  {
+    id: 5,
+    name: "Okamoto Zero Two (0.02mm)",
     price: 9500,
-    description: "အဆင့်မြင့် အနံ့ဓါတ်နှင့် ချစ်သူတွေအတွက် Romantic Mood Booster",
-    image:
-      "https://via.placeholder.com/400x250?text=Romantic+Spray",
+    image: "/products/okamoto_002.png",
+    description:
+      "Soft, durable, and smooth condoms with 0.02mm thickness for a natural feel.",
+    category: "Condoms",
+  },
+  {
+    id: 6,
+    name: "Sagami Original 0.02",
+    price: 11000,
+    image: "/products/sagami_002.png",
+    description:
+      "Non-latex polyurethane condoms with high heat transfer for real-skin sensation.",
+    category: "Condoms",
+  },
+  {
+    id: 7,
+    name: "King Size XL Condoms",
+    price: 8500,
+    image: "/products/king_size_xl.png",
+    description: "Extra-large condoms for better comfort and perfect fit.",
+    category: "Condoms",
+  },
+  {
+    id: 8,
+    name: "Ribbed & Dotted Condoms",
+    price: 6500,
+    image: "/products/ribbed_dotted.png",
+    description:
+      "Textured condoms with ribbed and dotted patterns for enhanced pleasure.",
+    category: "Condoms",
+  },
+  {
+    id: 9,
+    name: "Flavored Condoms (Mix Pack)",
+    price: 6000,
+    image: "/products/flavored_mix.png",
+    description:
+      "Variety pack with strawberry, banana, chocolate, and mint flavors. Ideal for couples.",
+    category: "Condoms",
+  },
+  {
+    id: 10,
+    name: "Ultra Thin Japanese Latex",
+    price: 7000,
+    image: "/products/jp_ultra_thin.png",
+    description:
+      "Soft-touch Japanese latex designed for thinness and maximum sensitivity.",
+    category: "Condoms",
   },
 ];
