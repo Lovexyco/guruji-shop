@@ -1,19 +1,16 @@
+"use client";
+
 import React, { useState } from "react";
-import { products as initialProducts } from "../products";
+import { initialProducts, Product } from "../products";
 
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  image?: string;
-}
-
-export default function ProductPage() {
-  const isAdmin = false;
-
+export default function ProductsPage() {
+  // Load products into state for UI
   const [products, setProducts] = useState<Product[]>(initialProducts);
 
+  // Admin on/off (public = false)
+  const isAdmin = false;
+
+  // Form data state
   const [newProduct, setNewProduct] = useState({
     title: "",
     price: "",
@@ -21,9 +18,11 @@ export default function ProductPage() {
     image: "",
   });
 
+  // Add new product handler
   const handleAddProduct = () => {
-    if (!newProduct.title || !newProduct.price)
-      return alert("Enter full info!");
+    if (!newProduct.title || !newProduct.price) {
+      return alert("Please enter product title & price!");
+    }
 
     const product: Product = {
       id: Date.now(),
@@ -34,13 +33,23 @@ export default function ProductPage() {
     };
 
     setProducts([...products, product]);
-    setNewProduct({ title: "", price: "", description: "", image: "" });
+
+    // reset form
+    setNewProduct({
+      title: "",
+      price: "",
+      description: "",
+      image: "",
+    });
+
+    alert("✔️ Product Added (Temporary UI Only)");
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4 text-center">🛍️ Product List</h2>
+    <div className="max-w-4xl mx-auto p-4">
+      <h2 className="text-2xl font-bold mb-6 text-center">🛍️ Product List</h2>
 
+      {/* Admin Form */}
       {isAdmin && (
         <div className="border p-4 rounded-2xl mb-6 bg-gray-50 shadow-sm">
           <h3 className="font-semibold mb-2">➕ Add New Product</h3>
@@ -75,7 +84,7 @@ export default function ProductPage() {
 
           <input
             className="w-full mb-2 p-2 border rounded"
-            placeholder="Image URL"
+            placeholder="Image URL (optional)"
             value={newProduct.image}
             onChange={(e) =>
               setNewProduct({ ...newProduct, image: e.target.value })
@@ -91,6 +100,7 @@ export default function ProductPage() {
         </div>
       )}
 
+      {/* Product List */}
       <div className="grid md:grid-cols-2 gap-4">
         {products.map((p) => (
           <div
@@ -106,7 +116,9 @@ export default function ProductPage() {
             )}
 
             <h4 className="font-bold text-lg">{p.title}</h4>
+
             <p className="text-gray-600 text-sm">{p.description}</p>
+
             <p className="font-semibold text-yellow-600 mt-2">
               💰 {p.price.toLocaleString()} Ks
             </p>
