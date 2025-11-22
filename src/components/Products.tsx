@@ -1,16 +1,11 @@
 "use client";
-
 import React, { useState } from "react";
-import { initialProducts, Product } from "../products";
+import { products as initialProducts, Product } from "@/products";
 
-export default function ProductsPage() {
-  // Load products into state for UI
+export default function ProductPage() {
+  const isAdmin = false; // Admin → true (for adding product)
   const [products, setProducts] = useState<Product[]>(initialProducts);
 
-  // Admin on/off (public = false)
-  const isAdmin = false;
-
-  // Form data state
   const [newProduct, setNewProduct] = useState({
     title: "",
     price: "",
@@ -18,11 +13,9 @@ export default function ProductsPage() {
     image: "",
   });
 
-  // Add new product handler
   const handleAddProduct = () => {
-    if (!newProduct.title || !newProduct.price) {
-      return alert("Please enter product title & price!");
-    }
+    if (!newProduct.title || !newProduct.price)
+      return alert("Please fill all required fields!");
 
     const product: Product = {
       id: Date.now(),
@@ -33,27 +26,17 @@ export default function ProductsPage() {
     };
 
     setProducts([...products, product]);
-
-    // reset form
-    setNewProduct({
-      title: "",
-      price: "",
-      description: "",
-      image: "",
-    });
-
-    alert("✔️ Product Added (Temporary UI Only)");
+    setNewProduct({ title: "", price: "", description: "", image: "" });
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-6 text-center">🛍️ Product List</h2>
+    <div className="max-w-3xl mx-auto p-4">
+      <h2 className="text-2xl font-bold mb-4 text-center">🛍️ Product List</h2>
 
-      {/* Admin Form */}
+      {/* Admin Add Form */}
       {isAdmin && (
         <div className="border p-4 rounded-2xl mb-6 bg-gray-50 shadow-sm">
           <h3 className="font-semibold mb-2">➕ Add New Product</h3>
-
           <input
             className="w-full mb-2 p-2 border rounded"
             placeholder="Product Title"
@@ -102,11 +85,15 @@ export default function ProductsPage() {
 
       {/* Product List */}
       <div className="grid md:grid-cols-2 gap-4">
-        {products.map((p) => (
+        {products.map((p, index) => (
           <div
             key={p.id}
             className="border rounded-2xl p-4 shadow hover:shadow-md transition"
           >
+            <p className="text-sm text-gray-500 mb-1">
+              🏷️ Item {index + 1}
+            </p>
+
             {p.image && (
               <img
                 src={p.image}
@@ -116,9 +103,7 @@ export default function ProductsPage() {
             )}
 
             <h4 className="font-bold text-lg">{p.title}</h4>
-
             <p className="text-gray-600 text-sm">{p.description}</p>
-
             <p className="font-semibold text-yellow-600 mt-2">
               💰 {p.price.toLocaleString()} Ks
             </p>
@@ -127,4 +112,4 @@ export default function ProductsPage() {
       </div>
     </div>
   );
-}
+                }
