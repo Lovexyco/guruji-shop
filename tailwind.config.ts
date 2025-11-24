@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -14,71 +19,85 @@ export default {
     },
     extend: {
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        pyidaungsu: ['Pyidaungsu', 'Myanmar Text', 'sans-serif'],
+        inter: ["Inter", "sans-serif"],
+        pyidaungsu: ["Pyidaungsu", "Myanmar Text", "sans-serif"],
       },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
           light: "hsl(var(--primary-light))",
           glow: "hsl(var(--primary-glow))",
         },
+
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
+
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
           hover: "hsl(var(--accent-hover))",
         },
+
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
+
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
+        /** MERGED BRAND COLORS HERE */
         brand: {
-  red: "#D9002B",
-  dark: "#0B0B0C",
-  card: "#141416",
-  textLight: "#F5F5F5",
-  textGray: "#9A9A9A",
-},
-        brand: {
-  gold: "#E6C384",
-  goldSoft: "#F2E4C9",
-  dark: "#1A1A1A",
-  darkSoft: "#232323",
-  cream: "#FFF9F0",
-        }
+          // Old red theme
+          red: "#D9002B",
+          dark: "#0B0B0C",
+          card: "#141416",
+          textLight: "#F5F5F5",
+          textGray: "#9A9A9A",
+
+          // Option D gold premium theme
+          gold: "#E6C384",
+          goldSoft: "#F2E4C9",
+          darkPremium: "#1A1A1A",
+          darkSoft: "#232323",
+          cream: "#FFF9F0",
+        },
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-          },
-    boxShadow: {
-  soft: "0 4px 20px rgba(0,0,0,0.08)",
-  gold: "0 0 12px rgba(230, 195, 132, 0.55)",
-    }
+
+      /** FIXED: boxShadow is now inside extend{} */
+      boxShadow: {
+        soft: "0 4px 20px rgba(0,0,0,0.08)",
+        gold: "0 0 12px rgba(230, 195, 132, 0.55)",
+      },
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -101,6 +120,7 @@ export default {
           "100%": { transform: "scale(1)", opacity: "1" },
         },
       },
+
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
@@ -110,5 +130,6 @@ export default {
       },
     },
   },
+
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
