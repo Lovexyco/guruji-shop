@@ -1,110 +1,98 @@
+"use client";
 import React from "react";
-import { products } from "../products";
 
 export default function HomePage() {
   return (
-    <div className="w-full text-gray-800">
+    <div className="bg-[#0B0B0C] text-white min-h-screen pb-16">
 
-      {/* 🌟 HERO SECTION */}
-      <div className="bg-blue-900 text-white py-16 px-6 md:px-12 lg:px-20">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+      {/* 🔥 HERO SECTION */}
+      <section className="relative w-full max-w-6xl mx-auto px-4 py-10">
+        <img
+          src="/banner/main_couple.png"
+          alt="Hero Banner"
+          className="w-full rounded-3xl shadow-xl object-cover"
+        />
+        <h1 className="text-4xl md:text-5xl font-bold mt-6 text-center">
+          Premium Men & Women Intimacy Store
+        </h1>
+        <p className="text-center text-gray-300 mt-3">
+          High-quality lifestyle products that enhance confidence, attraction,
+          and intimacy.
+        </p>
+      </section>
 
-          <div>
-            <h1 className="text-4xl font-bold leading-tight mb-4">
-              Rainy Offers For Hot Summer!
-            </h1>
-            <p className="opacity-80 mb-6">
-              Best quality products for daily lifestyle & couples.
+      {/* 🔥 CATEGORY SECTION */}
+      <section className="max-w-6xl mx-auto px-4 mt-10">
+        <h2 className="text-3xl font-bold mb-6 text-center">
+          Shop by Category
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+          {/* MEN */}
+          <div className="bg-[#141416] hover:scale-105 transition rounded-2xl p-5 shadow-lg">
+            <img
+              src="/categories/men.png"
+              className="w-full h-44 object-cover rounded-xl"
+            />
+            <h3 className="text-xl font-bold mt-3">Men</h3>
+            <p className="text-gray-400 text-sm">
+              Grooming • Performance • Confidence Boosters
             </p>
-            <button className="bg-yellow-400 px-6 py-3 font-semibold rounded-lg text-black">
-              Shop Now
-            </button>
           </div>
 
-          <img
-            src="/banner/main_girl.png"
-            className="rounded-xl shadow-lg w-full object-cover"
-          />
-        </div>
-      </div>
+          {/* WOMEN */}
+          <div className="bg-[#141416] hover:scale-105 transition rounded-2xl p-5 shadow-lg">
+            <img
+              src="/categories/women.png"
+              className="w-full h-44 object-cover rounded-xl"
+            />
+            <h3 className="text-xl font-bold mt-3">Women</h3>
+            <p className="text-gray-400 text-sm">
+              Beauty • Sensual • Self-care Enhancers
+            </p>
+          </div>
 
-      {/* 🟦 CATEGORY SECTION (Men / Women / Accessories) */}
-      <div className="py-12 px-6 md:px-12 grid md:grid-cols-3 gap-6">
-        <div className="rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-          <img src="/categories/men.png" className="h-56 w-full object-cover" />
-          <div className="p-4 font-semibold text-lg text-center">MEN</div>
+          {/* ACCESSORIES */}
+          <div className="bg-[#141416] hover:scale-105 transition rounded-2xl p-5 shadow-lg">
+            <img
+              src="/categories/accessories.png"
+              className="w-full h-44 object-cover rounded-xl"
+            />
+            <h3 className="text-xl font-bold mt-3">Accessories</h3>
+            <p className="text-gray-400 text-sm">
+              Perfumes • Sprays • Oils • Eyemasks • More
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* FEATURES SECTION */}
+      <section className="max-w-4xl mx-auto mt-14 px-4 grid sm:grid-cols-3 gap-6">
+
+        {/* DELIVERY */}
+        <div className="flex flex-col items-center text-center bg-[#141416] p-6 rounded-2xl shadow-lg">
+          <img src="/icons/delivery.png" className="w-16 h-16 mb-3" />
+          <h4 className="font-bold text-lg">Fast Delivery</h4>
+          <p className="text-gray-400 text-sm">Quick & secure shipping</p>
         </div>
 
-        <div className="rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-          <img src="/categories/women.png" className="h-56 w-full object-cover" />
-          <div className="p-4 font-semibold text-lg text-center">WOMEN</div>
+        {/* SUPPORT */}
+        <div className="flex flex-col items-center text-center bg-[#141416] p-6 rounded-2xl shadow-lg">
+          <img src="/icons/support.png" className="w-16 h-16 mb-3" />
+          <h4 className="font-bold text-lg">24/7 Support</h4>
+          <p className="text-gray-400 text-sm">We are always available</p>
         </div>
 
-        <div className="rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-          <img src="/categories/accessories.png" className="h-56 w-full object-cover" />
-          <div className="p-4 font-semibold text-lg text-center">Accessories</div>
+        {/* BRANDING */}
+        <div className="flex flex-col items-center text-center bg-[#141416] p-6 rounded-2xl shadow-lg">
+          <img src="/icons/support.png" className="w-16 h-16 mb-3" />
+          <h4 className="font-bold text-lg">Official Shop</h4>
+          <p className="text-gray-400 text-sm">Trusted premium products</p>
         </div>
-      </div>
 
-      {/* ⭐ FEATURED PRODUCTS */}
-      <div className="px-6 md:px-12 py-10">
-        <h2 className="text-2xl font-bold mb-6 text-center">Featured Products</h2>
-
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.slice(0, 8).map((item) => (
-            <div
-              key={item.id}
-              className="border rounded-xl shadow-sm hover:shadow-md transition p-4"
-            >
-              <img
-                src={item.image}
-                className="h-48 w-full object-cover rounded-lg mb-3"
-              />
-              <div className="font-semibold text-lg">{item.name}</div>
-              <div className="text-gray-500 text-sm">{item.category}</div>
-              <div className="text-blue-700 font-bold mt-2">
-                {item.price.toLocaleString()} Ks
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* 📢 MIDDLE BANNER */}
-      <div className="bg-blue-100 px-6 md:px-12 py-14 my-12 text-center rounded-2xl">
-        <h3 className="text-3xl font-bold mb-3">Special Edition</h3>
-        <p className="text-gray-600 mb-5">
-          Limited stock for this week only. Shop premium collections.
-        </p>
-        <button className="bg-blue-800 text-white px-6 py-3 rounded-lg">
-          Explore Now
-        </button>
-      </div>
-
-      {/* ⭐ SERVICES ROW */}
-      <div className="py-12 px-6 md:px-12 grid md:grid-cols-4 gap-6 text-center">
-        <div>
-          <img src="/icons/delivery.png" className="mx-auto h-12 mb-3" />
-          <div className="font-semibold">Fast Delivery</div>
-        </div>
-        <div>
-          <img src="/icons/quality.png" className="mx-auto h-12 mb-3" />
-          <div className="font-semibold">Premium Quality</div>
-        </div>
-        <div>
-          <img src="/icons/support.png" className="mx-auto h-12 mb-3" />
-          <div className="font-semibold">24/7 Support</div>
-        </div>
-        <div>
-          <img src="/icons/payment.png" className="mx-auto h-12 mb-3" />
-          <div className="font-semibold">Secure Payment</div>
-        </div>
-      </div>
-
-      {/* FOOTER */}
-      <footer className="bg-gray-900 text-white py-6 text-center">
-        Guruji Shop © {new Date().getFullYear()} — All Rights Reserved
-      </footer>
+      </section>
     </div>
   );
-      }
+}
