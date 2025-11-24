@@ -61,12 +61,24 @@ export default {
   textLight: "#F5F5F5",
   textGray: "#9A9A9A",
 },
+        brand: {
+  gold: "#E6C384",
+  goldSoft: "#F2E4C9",
+  dark: "#1A1A1A",
+  darkSoft: "#232323",
+  cream: "#FFF9F0",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+          },
+    boxShadow: {
+  soft: "0 4px 20px rgba(0,0,0,0.08)",
+  gold: "0 0 12px rgba(230, 195, 132, 0.55)",
+    }
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
