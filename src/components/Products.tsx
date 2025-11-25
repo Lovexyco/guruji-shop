@@ -7,26 +7,28 @@ export default function ProductPage() {
   const [products, setProducts] = useState<Product[]>(initialProducts);
 
   const [newProduct, setNewProduct] = useState({
-    title: "",
+    name: "",
     price: "",
     description: "",
     image: "",
+    category: "",
   });
 
   const handleAddProduct = () => {
-    if (!newProduct.title || !newProduct.price)
+    if (!newProduct.name || !newProduct.price)
       return alert("Please fill all required fields!");
 
     const product: Product = {
       id: Date.now(),
-      title: newProduct.title,
+      name: newProduct.name,
       price: parseFloat(newProduct.price),
       description: newProduct.description,
       image: newProduct.image,
+      category: newProduct.category,
     };
 
     setProducts([...products, product]);
-    setNewProduct({ title: "", price: "", description: "", image: "" });
+    setNewProduct({ name: "", price: "", description: "", image: "", category: "" });
   };
 
   return (
@@ -39,10 +41,10 @@ export default function ProductPage() {
           <h3 className="font-semibold mb-2">➕ Add New Product</h3>
           <input
             className="w-full mb-2 p-2 border rounded"
-            placeholder="Product Title"
-            value={newProduct.title}
+            placeholder="Product Name"
+            value={newProduct.name}
             onChange={(e) =>
-              setNewProduct({ ...newProduct, title: e.target.value })
+              setNewProduct({ ...newProduct, name: e.target.value })
             }
           />
 
@@ -74,6 +76,15 @@ export default function ProductPage() {
             }
           />
 
+          <input
+            className="w-full mb-2 p-2 border rounded"
+            placeholder="Category"
+            value={newProduct.category}
+            onChange={(e) =>
+              setNewProduct({ ...newProduct, category: e.target.value })
+            }
+          />
+
           <button
             onClick={handleAddProduct}
             className="bg-yellow-500 text-white py-2 px-4 rounded-lg"
@@ -97,12 +108,12 @@ export default function ProductPage() {
             {p.image && (
               <img
                 src={p.image}
-                alt={p.title}
+                alt={p.name}
                 className="w-full h-40 object-cover rounded-lg mb-2"
               />
             )}
 
-            <h4 className="font-bold text-lg">{p.title}</h4>
+            <h4 className="font-bold text-lg">{p.name}</h4>
             <p className="text-gray-600 text-sm">{p.description}</p>
             <p className="font-semibold text-yellow-600 mt-2">
               💰 {p.price.toLocaleString()} Ks
