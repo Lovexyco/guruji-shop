@@ -8,7 +8,7 @@ export default function HomePage() {
       {/* 🔥 HERO SECTION */}
       <section className="relative w-full max-w-6xl mx-auto px-4 py-10">
         <img
-          src="/banner/main_couple.png"
+          src="/assets/hero/main_couple.png"
           alt="Hero Banner"
           className="w-full rounded-3xl shadow-xl object-cover"
         />
@@ -32,7 +32,7 @@ export default function HomePage() {
           {/* MEN */}
           <div className="bg-[#141416] hover:scale-105 transition rounded-2xl p-5 shadow-lg">
             <img
-              src="/categories/men.png"
+              src="/assets/categories/men.png"
               className="w-full h-44 object-cover rounded-xl"
             />
             <h3 className="text-xl font-bold mt-3">Men</h3>
@@ -44,7 +44,7 @@ export default function HomePage() {
           {/* WOMEN */}
           <div className="bg-[#141416] hover:scale-105 transition rounded-2xl p-5 shadow-lg">
             <img
-              src="/categories/women.png"
+              src="/assets/categories/women.png"
               className="w-full h-44 object-cover rounded-xl"
             />
             <h3 className="text-xl font-bold mt-3">Women</h3>
@@ -56,7 +56,7 @@ export default function HomePage() {
           {/* ACCESSORIES */}
           <div className="bg-[#141416] hover:scale-105 transition rounded-2xl p-5 shadow-lg">
             <img
-              src="/categories/accessories.png"
+              src="/assets/categories/accessories.png"
               className="w-full h-44 object-cover rounded-xl"
             />
             <h3 className="text-xl font-bold mt-3">Accessories</h3>
@@ -73,21 +73,21 @@ export default function HomePage() {
 
         {/* DELIVERY */}
         <div className="flex flex-col items-center text-center bg-[#141416] p-6 rounded-2xl shadow-lg">
-          <img src="/icons/delivery.png" className="w-16 h-16 mb-3" />
+          <img src="/assets/icons/delivery.png" className="w-16 h-16 mb-3" />
           <h4 className="font-bold text-lg">Fast Delivery</h4>
           <p className="text-gray-400 text-sm">Quick & secure shipping</p>
         </div>
 
         {/* SUPPORT */}
         <div className="flex flex-col items-center text-center bg-[#141416] p-6 rounded-2xl shadow-lg">
-          <img src="/icons/support.png" className="w-16 h-16 mb-3" />
+          <img src="/assets/icons/support.png" className="w-16 h-16 mb-3" />
           <h4 className="font-bold text-lg">24/7 Support</h4>
           <p className="text-gray-400 text-sm">We are always available</p>
         </div>
 
         {/* BRANDING */}
         <div className="flex flex-col items-center text-center bg-[#141416] p-6 rounded-2xl shadow-lg">
-          <img src="/icons/support.png" className="w-16 h-16 mb-3" />
+          <img src="/assets/icons/secure.png" className="w-16 h-16 mb-3" />
           <h4 className="font-bold text-lg">Official Shop</h4>
           <p className="text-gray-400 text-sm">Trusted premium products</p>
         </div>
