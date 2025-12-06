@@ -1,100 +1,39 @@
-export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  description: string;
-  category: string;
-}
-
-export const products: Product[] = [
+export const products = [
   {
-    id: 1,
-    name: "Durex Thin Feel Condoms",
-    price: 6500,
-    image: "/assets/products/durex_thin_feel.png",
-    description:
-      "Ultra-thin condoms designed for enhanced sensitivity and a more natural feel.",
-    category: "Condoms",
+    id: "m001",
+    name: "Longtime Performance Spray",
+    category: "men",
+    price: 30000, 
+    image: "/products/men/men_longtime-spray-1.png",
+    description: “၃ချက်ဖျန်းထားရုံဖြင့် (၄၅)မိနစ်ခန့်ပိုကြာမြင့်စေတဲ့အစွမ်းထက် အမျိုးသားကြာဖျန်းဆေး VIGA SPRAY ",
+    tags: ["performance"],
   },
   {
-    id: 2,
-    name: "Durex Extra Safe Condoms",
-    price: 7000,
-    image: "/assets/products/durex_extra_safe.png",
-    description:
-      "Thicker condoms with extra lubrication for added safety and protection.",
-    category: "Condoms",
+    id: "m002",
+    name: "OLO Bead Condom Pack",
+    category: "men",
+    price: 25000,
+    image: "/products/men/men_olo-bead-condom-1.png",
+    description: “ပျော့ပျောင်းတဲ့ဆီလီကွန်ဂေါ်လီလုံးလေးတွေနှင့် ကမ္ဘာ့အပါးလွှာဆုံးသဘာဝရာဘာကွန်ဒုံးတွေပါပါတယ်။ တစ်ဘူးတွင် တစ်ခါသုံးကွန်ဒုံး - ၅ခု၊ နှင့်ဆီလီကွန်ဂေါ်လီ -၅ခု ပါဝင်ပါသည်။”,
+    tags: ["condom"],
   },
   {
-    id: 3,
-    name: "Durex Invisible Ultra Thin",
-    price: 7500,
-    image: "/assets/products/durex_invisible.png",
-    description:
-      "Durex's thinnest condoms ever — maximum sensitivity and comfort.",
-    category: "Condoms",
+    id: "w001",
+    name: "Sexy Dress (Black)",
+    category: "women",
+    price: 28000,
+    image: "/products/women/women_sexy-dress-1.png",
+    description: “Sexy Dress ( ဆွဲဆောင်မှုရှိသောဝတ်စုံ)
+80lb to 150lb အတွင်းဝတ်ဆင်ရအဆင်ပြေပြီး၊Fit ဖြစ်စေပါမည်။”,
+    tags: ["dress"],
   },
   {
-    id: 4,
-    name: "Okamoto Zero One (0.01mm)",
-    price: 12000,
-    image: "/assets/products/okamoto_001.png",
-    description:
-      "Premium Japanese condoms with only 0.01mm thickness — extremely natural feeling.",
-    category: "Condoms",
-  },
-  {
-    id: 5,
-    name: "Okamoto Zero Two (0.02mm)",
-    price: 9500,
-    image: "/assets/products/okamoto_002.png",
-    description:
-      "Soft, durable, and smooth condoms with 0.02mm thickness for a natural feel.",
-    category: "Condoms",
-  },
-  {
-    id: 6,
-    name: "Sagami Original 0.02",
-    price: 11000,
-    image: "/assets/products/sagami_002.png",
-    description:
-      "Non-latex polyurethane condoms with high heat transfer for real-skin sensation.",
-    category: "Condoms",
-  },
-  {
-    id: 7,
-    name: "King Size XL Condoms",
-    price: 8500,
-    image: "/assets/products/king_size_xl.png",
-    description: "Extra-large condoms for better comfort and perfect fit.",
-    category: "Condoms",
-  },
-  {
-    id: 8,
-    name: "Ribbed & Dotted Condoms",
-    price: 6500,
-    image: "/assets/products/ribbed_dotted.png",
-    description:
-      "Textured condoms with ribbed and dotted patterns for enhanced pleasure.",
-    category: "Condoms",
-  },
-  {
-    id: 9,
-    name: "Flavored Condoms (Mix Pack)",
-    price: 6000,
-    image: "/assets/products/flavored_mix.png",
-    description:
-      "Variety pack with strawberry, banana, chocolate, and mint flavors. Ideal for couples.",
-    category: "Condoms",
-  },
-  {
-    id: 10,
-    name: "Ultra Thin Japanese Latex",
-    price: 7000,
-    image: "/assets/products/jp_ultra_thin.png",
-    description:
-      "Soft-touch Japanese latex designed for thinness and maximum sensitivity.",
-    category: "Condoms",
+    id: "a001",
+    name: "BDSM Position Rope Set",
+    category: "accessories",
+    price: 50000,
+    image: "/products/accessories/acs_bdsm-pos-rope-1.png",
+    description: “ပိုပြီးပျော်စရာကောင်းတဲ့ကစားနည်းအစုံ(အကွက်အစုံ)ကို သက်တောင့်သက်သာအနေထားဖြင့်ဖန်တီးသော့ဖွင့်ပေးနိုင်တဲ့ အရည်အသွေးကောင်း“ချစ်ကြိုး”ဖြစ်ပါသည်။
+    tags: ["bdsm"],
   },
 ];
