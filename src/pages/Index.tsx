@@ -198,17 +198,41 @@ export default function HomePage() {
 
       {/* ═══════════════════ FEATURES ROW ═══════════════════ */}
       <section className="max-w-4xl mx-auto mt-16 px-4 grid sm:grid-cols-3 gap-4">
-        {[
-          { img: "/assets/icons/delivery.png", title: "Fast Delivery", desc: "Quick & secure shipping" },
-          { img: "/assets/icons/support.png", title: "24/7 Support", desc: "We are always available" },
-          { img: "/assets/icons/secure.png", title: "Official Shop", desc: "Trusted premium products" },
-        ].map((f) => (
-          <div key={f.title} className="flex flex-col items-center text-center bg-card border border-border p-6 rounded-2xl shadow-card">
-            <img src={f.img} alt={f.title} className="w-14 h-14 mb-3" loading="lazy" />
-            <h4 className="font-bold text-base text-foreground">{f.title}</h4>
-            <p className="text-muted-foreground text-sm">{f.desc}</p>
+        <div className="flex flex-col items-center text-center bg-card border border-border p-6 rounded-2xl shadow-card">
+          <img src="/assets/icons/delivery.png" alt="Fast Delivery" className="w-14 h-14 mb-3" loading="lazy" />
+          <h4 className="font-bold text-base text-foreground">Fast Delivery</h4>
+          <p className="text-muted-foreground text-sm">Quick & secure shipping</p>
+        </div>
+
+        <div className="flex flex-col items-center text-center bg-card border border-border p-6 rounded-2xl shadow-card">
+          <img src="/assets/icons/support.png" alt="24/7 Customer Support" className="w-14 h-14 mb-3" loading="lazy" />
+          <h4 className="font-bold text-base text-foreground">24/7 Customer Support</h4>
+          <p className="text-muted-foreground text-sm">Chat with us instantly for product inquiries and orders.</p>
+          <div className="flex flex-col sm:flex-row gap-2 mt-3 w-full">
+            <a
+              href="https://invite.viber.com/?number=%2B959788851201"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold rounded-lg transition-smooth"
+            >
+              🟣 Chat on Viber
+            </a>
+            <a
+              href="https://t.me/Realkings_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-xs font-semibold rounded-lg transition-smooth"
+            >
+              🔵 Message on Telegram
+            </a>
           </div>
-        ))}
+        </div>
+
+        <div className="flex flex-col items-center text-center bg-card border border-border p-6 rounded-2xl shadow-card">
+          <img src="/assets/icons/secure.png" alt="Discreet Packaging" className="w-14 h-14 mb-3" loading="lazy" />
+          <h4 className="font-bold text-base text-foreground">🔒 Discreet Packaging</h4>
+          <p className="text-muted-foreground text-sm">No product name on parcel</p>
+        </div>
       </section>
 
       {/* ═══════════════════ STICKY TELEGRAM BUTTON ═══════════════════ */}
