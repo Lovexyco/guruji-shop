@@ -38,7 +38,7 @@ export const products: Product[] = [
   },
   {
     id: "a001",
-    name: "BDSM Position Rope Set",
+    name: "BDSM Rope Set",
     category: "accessories",
     price: 50000,
     image: "/products/accessories/acs_bdsm-pos-rope-1.png",

@@ -86,7 +86,7 @@ const Footer = () => {
                 <span className="font-pyidaungsu">Viber မက်ဆေ့ခ်ပို့ရန် (09788851201)</span>
               </a>
               <a 
-                href="https://t.me/realkings_adm" 
+                href="https://t.me/Realkings_bot" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-smooth group"
