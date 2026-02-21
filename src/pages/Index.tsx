@@ -63,7 +63,7 @@ export default function HomePage() {
               variant="outline"
               className="w-full sm:w-auto gap-2 text-base border-white/30 text-white hover:bg-white/10 hover:text-white"
             >
-              <a href="https://t.me/realkings_adm" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/Realkings_bot" target="_blank" rel="noopener noreferrer">
                 <Send className="w-5 h-5" />
                 Message on Telegram
               </a>
@@ -213,7 +213,7 @@ export default function HomePage() {
 
       {/* ═══════════════════ STICKY TELEGRAM BUTTON ═══════════════════ */}
       <a
-        href="https://t.me/realkings_adm"
+        href="https://t.me/Realkings_bot"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-5 py-3 shadow-hover flex items-center gap-2 transition-smooth hover:scale-105"
